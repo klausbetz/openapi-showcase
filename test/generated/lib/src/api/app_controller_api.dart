@@ -41,7 +41,7 @@ class AppControllerApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/v1';
+    final _path = r'/api/v1/messages';
     final _options = Options(
       method: r'POST',
       headers: <String, dynamic>{
@@ -132,7 +132,7 @@ class AppControllerApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/api/v1';
+    final _path = r'/api/v1/messages';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

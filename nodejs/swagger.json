@@ -6,12 +6,12 @@
   },
   "servers": [
     {
-      "url": "http://localhost:8081",
+      "url": "http://host.docker.internal:8081",
       "description": "Generated server url"
     }
   ],
   "paths": {
-    "/api/v1": {
+    "/api/v1/messages": {
       "get": {
         "tags": [
           "app-controller"

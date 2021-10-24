@@ -12,7 +12,7 @@ import 'package:api/src/auth/oauth.dart';
 import 'package:api/src/api/app_controller_api.dart';
 
 class Api {
-  static const String basePath = r'http://localhost:8081';
+  static const String basePath = r'http://host.docker.internal:8080';
 
   final Dio dio;
   final Serializers serializers;
