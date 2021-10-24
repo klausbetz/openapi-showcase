@@ -1,0 +1,19 @@
+version: "3"
+services:
+  openApiShowcaseFromNodeJS:
+    container_name: openApiShowcaseFromNodeJS
+    command: java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -i http://host.docker.internal:8081/v3/api-docs -g dart-dio-next -o /tmp/codegen/ --skip-validate-spec -c /tmp/config.yml
+    image: "openapitools/openapi-generator-cli:v5.2.1"
+    volumes:
+      - ./generated:/tmp/codegen
+      - ./codegen-config.yml:/tmp/config.yml
+    working_dir: /opt/openapi-generator
+
+  openApiShowcaseFromSpring:
+    container_name: openApiShowcaseFromSpring
+    command: java -jar modules/openapi-generator-cli/target/openapi-generator-cli.jar generate -i http://host.docker.internal:8080/v3/api-docs -g dart-dio-next -o /tmp/codegen/ --skip-validate-spec -c /tmp/config.yml
+    image: "openapitools/openapi-generator-cli:v5.2.1"
+    volumes:
+      - ./generated:/tmp/codegen
+      - ./codegen-config.yml:/tmp/config.yml
+    working_dir: /opt/openapi-generator

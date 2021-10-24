@@ -1,0 +1,10 @@
+!generated/lib/api/*.dart
+!generated/lib/auth/*.dart
+!generated/lib/model/*.dart
+!generated/lib/*.dart
+
+generated/*.*
+!generated/pubspec.yaml
+
+generated/test
+generated/doc
