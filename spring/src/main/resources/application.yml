@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    tags-sorter: alpha
+    operations-sorter: alpha
+    doc-expansion: false
+    path: /swagger
